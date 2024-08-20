@@ -93,7 +93,8 @@ class Scratch3YourExtension {
      */
     plus ({ n1, n2 }) {
         // example implementation to return a string
-        var product = n1 + n2
+        let product = n1 + n2
+
         return product;
     }
 }
