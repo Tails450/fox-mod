@@ -14,10 +14,10 @@ class Scratch3YourExtension {
     getInfo () {
         return {
             // unique ID for your extension
-            id: 'yourScratchExtension',
+            id: 'mathPlus',
 
             // name that will be displayed in the Scratch UI
-            name: 'Math',
+            name: 'Math+',
 
             // colours to use for your extension blocks
             color1: '#050505',
@@ -31,7 +31,7 @@ class Scratch3YourExtension {
             blocks: [
                 {
                     // name of the function where your block code lives
-                    opcode: 'myFirstBlock',
+                    opcode: 'plusMinus',
 
                     // type of block - choose from:
                     //   BlockType.REPORTER - returns a value, like "direction"
@@ -41,7 +41,7 @@ class Scratch3YourExtension {
                     blockType: BlockType.REPORTER,
 
                     // label to display on the block
-                    text: '[fn] join with [ln]',
+                    text: '[n1] + [n2] - [n3]',
 
                     // true if this block should end a stack
                     terminal: false,
@@ -54,9 +54,9 @@ class Scratch3YourExtension {
 
                     // arguments used in the block
                     arguments: {
-                        fn: {
+                        n1: {
                             // default value before the user sets something
-                            defaultValue: 'apple',
+                            defaultValue: '1',
 
                             // type/shape of the parameter - choose from:
                             //     ArgumentType.ANGLE - numeric value with an angle picker
@@ -65,11 +65,11 @@ class Scratch3YourExtension {
                             //     ArgumentType.NUMBER - numeric value
                             //     ArgumentType.STRING - text value
                             //     ArgumentType.NOTE - midi music value with a piano picker
-                            type: ArgumentType.STRING
+                            type: ArgumentType.NUMBER
                         },
-                        ln: {
+                        n2: {
                             // default value before the user sets something
-                            defaultValue: 'banana',
+                            defaultValue: '1',
 
                             // type/shape of the parameter - choose from:
                             //     ArgumentType.ANGLE - numeric value with an angle picker
@@ -78,7 +78,20 @@ class Scratch3YourExtension {
                             //     ArgumentType.NUMBER - numeric value
                             //     ArgumentType.STRING - text value
                             //     ArgumentType.NOTE - midi music value with a piano picker
-                            type: ArgumentType.STRING
+                            type: ArgumentType.NUMBER
+                        },
+                        n3: {
+                            // default value before the user sets something
+                            defaultValue: '1',
+
+                            // type/shape of the parameter - choose from:
+                            //     ArgumentType.ANGLE - numeric value with an angle picker
+                            //     ArgumentType.BOOLEAN - true/false value
+                            //     ArgumentType.COLOR - numeric value with a colour picker
+                            //     ArgumentType.NUMBER - numeric value
+                            //     ArgumentType.STRING - text value
+                            //     ArgumentType.NOTE - midi music value with a piano picker
+                            type: ArgumentType.NUMBER
                         }
                     }
                 }
@@ -91,9 +104,9 @@ class Scratch3YourExtension {
      * implementation of the block with the opcode that matches this name
      *  this will be called when the block is used
      */
-    myFirstBlock ({ fn, ln }) {
+    myFirstBlock ({ n1, n2, n3 }) {
         // example implementation to return a string
-        return fn + ln;
+        return n1 + n2 - n3;
     }
 }
 
