@@ -94,7 +94,7 @@ class Scratch3YourExtension {
     plus ({ n1, n2 }) {
         // example implementation to return a string
         let product = n1 + n2
-
+        parseFloat(product)
         return product;
     }
 }
