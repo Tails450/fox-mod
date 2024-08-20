@@ -93,7 +93,8 @@ class Scratch3YourExtension {
      */
     myFirstBlock ({ n1, n2 }) {
         // example implementation to return a string
-        return n1 + n2;
+        var product = n1 + n2
+        return product;
     }
 }
 
