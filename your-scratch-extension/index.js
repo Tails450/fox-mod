@@ -91,7 +91,7 @@ class Scratch3YourExtension {
      * implementation of the block with the opcode that matches this name
      *  this will be called when the block is used
      */
-    myFirstBlock ({ n1, n2 }) {
+    plus ({ n1, n2 }) {
         // example implementation to return a string
         var product = n1 + n2
         return product;
