@@ -249,7 +249,11 @@ class Scratch3YourExtension {
       const num1 = parseFloat(NUMBER_ONE);
       const num2 = parseFloat(NUMBER_TWO);
 
-      return Math.random() * (num2 - num1) + num1;
+      if (Number.isInteger(num1) && Number.isInteger(num2)) {
+        return Math.floor(Math.random() * (num1 - num2 + 1)) + num1;
+      } else {
+        return Math.random() * (num2 - num1) + num1;
+      }
     }
 
     abs ({ NUMBER_ONE }) {
