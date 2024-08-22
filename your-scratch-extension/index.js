@@ -180,6 +180,26 @@ class Scratch3YourExtension {
                   type: ArgumentType.NUMBER
                 }
               }
+            },
+            {
+              // function where your code logic lives
+              opcode: 'abs',
+      
+              // type of block
+              blockType: BlockType.REPORTER,
+      
+              // label to display on the block
+              text: 'Absolute value of [NUMBER_ONE]',
+      
+              // arguments used in the block
+              arguments: {
+                NUMBER_ONE: {
+                  defaultValue: -1,
+      
+                  // type/shape of the parameter
+                  type: ArgumentType.NUMBER
+                }
+              }
             }
           ]
         };
@@ -230,6 +250,12 @@ class Scratch3YourExtension {
       const num2 = parseFloat(NUMBER_TWO);
 
       return Math.random() * (num2 - num1) + num1;
+    }
+
+    abs ({ NUMBER_ONE }) {
+      const num1 = parseFloat(NUMBER_ONE);
+
+      return Math.abs(num1);
     }
 }
 
