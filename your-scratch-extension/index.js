@@ -33,12 +33,18 @@ class Scratch3YourExtension {
               blockType: BlockType.REPORTER,
       
               // label to display on the block
-              text: 'Title for ISBN book [BOOK_NUMBER]',
+              text: '[NUMBER_ONE] + [NUMBER_TWO]',
       
               // arguments used in the block
               arguments: {
-                BOOK_NUMBER: {
-                  defaultValue: 1718500564,
+                NUMBER_ONE: {
+                  defaultValue: 1,
+      
+                  // type/shape of the parameter
+                  type: ArgumentType.NUMBER
+                },
+                NUMBER_TWO: {
+                  defaultValue: 1,
       
                   // type/shape of the parameter
                   type: ArgumentType.NUMBER
@@ -54,19 +60,8 @@ class Scratch3YourExtension {
      * implementation of the block with the opcode that matches this name
      *  this will be called when the block is used
      */
-    myFirstBlock ({ BOOK_NUMBER }) {
-        return fetch('https://openlibrary.org/isbn/' + BOOK_NUMBER + '.json')
-          .then((response) => {
-            if (response.ok) {
-              return response.json();
-            }
-            else {
-              return { title: 'Unknown' };
-            }
-          })
-          .then((bookinfo) => {
-            return bookinfo.title;
-          });
+    myFirstBlock ({ NUMBER_ONE, NUMBER_TWO }) {
+        return NUMBER_ONE + NUMBER_TWO;
       }
 }
 
