@@ -154,6 +154,32 @@ class Scratch3YourExtension {
                   type: ArgumentType.NUMBER
                 }
               }
+            },
+            {
+              // function where your code logic lives
+              opcode: 'randomNumberBetween',
+      
+              // type of block
+              blockType: BlockType.REPORTER,
+      
+              // label to display on the block
+              text: 'Random number between [NUMBER_ONE] and [NUMBER_TWO]',
+      
+              // arguments used in the block
+              arguments: {
+                NUMBER_ONE: {
+                  defaultValue: 1,
+      
+                  // type/shape of the parameter
+                  type: ArgumentType.NUMBER
+                },
+                NUMBER_TWO: {
+                  defaultValue: 10,
+      
+                  // type/shape of the parameter
+                  type: ArgumentType.NUMBER
+                }
+              }
             }
           ]
         };
@@ -197,6 +223,13 @@ class Scratch3YourExtension {
       const num2 = parseFloat(NUMBER_TWO);
 
       return num1 ** num2;
+    }
+
+    randomNumberBetween ({ NUMBER_ONE, NUMBER_TWO }) {
+      const num1 = parseFloat(NUMBER_ONE);
+      const num2 = parseFloat(NUMBER_TWO);
+
+      return Math.random() * (num2 - num1) + num1;
     }
 }
 
