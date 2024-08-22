@@ -61,7 +61,12 @@ class Scratch3YourExtension {
      *  this will be called when the block is used
      */
     myFirstBlock ({ NUMBER_ONE, NUMBER_TWO }) {
-        return NUMBER_ONE + NUMBER_TWO;
+        // Convert the inputs to numbers
+        const num1 = parseFloat(NUMBER_ONE);
+        const num2 = parseFloat(NUMBER_TWO);
+  
+        // Return their sum
+        return num1 + num2;
       }
 }
 
