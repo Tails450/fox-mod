@@ -20,8 +20,8 @@ class Scratch3YourExtension {
           name: 'Math+',
       
           // colours to use for your extension blocks
-          color1: '#000099',
-          color2: '#660066',
+          color1: '#0affcf',
+          color2: '#0affde',
       
           // your Scratch blocks
           blocks: [
