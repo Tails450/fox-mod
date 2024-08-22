@@ -14,10 +14,10 @@ class Scratch3YourExtension {
     getInfo () {
         return {
           // unique ID for your extension
-          id: 'yourScratchExtension',
+          id: 'mathPlus',
       
           // name displayed in the Scratch UI
-          name: 'Demo',
+          name: 'Math+',
       
           // colours to use for your extension blocks
           color1: '#000099',
@@ -27,7 +27,7 @@ class Scratch3YourExtension {
           blocks: [
             {
               // function where your code logic lives
-              opcode: 'myFirstBlock',
+              opcode: 'addition',
       
               // type of block
               blockType: BlockType.REPORTER,
@@ -60,12 +60,10 @@ class Scratch3YourExtension {
      * implementation of the block with the opcode that matches this name
      *  this will be called when the block is used
      */
-    myFirstBlock ({ NUMBER_ONE, NUMBER_TWO }) {
-        // Convert the inputs to numbers
+    addition ({ NUMBER_ONE, NUMBER_TWO }) {
         const num1 = parseFloat(NUMBER_ONE);
         const num2 = parseFloat(NUMBER_TWO);
-  
-        // Return their sum
+
         return num1 + num2;
       }
 }
