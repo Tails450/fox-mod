@@ -194,6 +194,112 @@ class Scratch3YourExtension {
                   type: ArgumentType.NUMBER
                 }
               }
+            },
+            {
+              // function where your code logic lives
+              opcode: 'acosh',
+      
+              // type of block
+              blockType: BlockType.REPORTER,
+      
+              // label to display on the block
+              text: 'Acosh [NUMBER_ONE]',
+      
+              // arguments used in the block
+              arguments: {
+                NUMBER_ONE: {
+                  defaultValue: 2,
+      
+                  // type/shape of the parameter
+                  type: ArgumentType.NUMBER
+                }
+              }
+            },
+            {
+              // function where your code logic lives
+              opcode: 'asin',
+      
+              // type of block
+              blockType: BlockType.REPORTER,
+      
+              // label to display on the block
+              text: 'Asin [NUMBER_ONE]',
+      
+              // arguments used in the block
+              arguments: {
+                NUMBER_ONE: {
+                  defaultValue: 1,
+      
+                  // type/shape of the parameter
+                  type: ArgumentType.NUMBER
+                }
+              }
+            },
+            {
+              // function where your code logic lives
+              opcode: 'asinh',
+      
+              // type of block
+              blockType: BlockType.REPORTER,
+      
+              // label to display on the block
+              text: 'Asinh [NUMBER_ONE]',
+      
+              // arguments used in the block
+              arguments: {
+                NUMBER_ONE: {
+                  defaultValue: 1,
+      
+                  // type/shape of the parameter
+                  type: ArgumentType.NUMBER
+                }
+              }
+            },
+            {
+              // function where your code logic lives
+              opcode: 'atan',
+      
+              // type of block
+              blockType: BlockType.REPORTER,
+      
+              // label to display on the block
+              text: 'Atan [NUMBER_ONE]',
+      
+              // arguments used in the block
+              arguments: {
+                NUMBER_ONE: {
+                  defaultValue: 1,
+      
+                  // type/shape of the parameter
+                  type: ArgumentType.NUMBER
+                }
+              }
+            },
+            {
+              // function where your code logic lives
+              opcode: 'atanTwo',
+      
+              // type of block
+              blockType: BlockType.REPORTER,
+      
+              // label to display on the block
+              text: 'Atan2 x: [x] y: [y]',
+      
+              // arguments used in the block
+              arguments: {
+                x: {
+                  defaultValue: 1,
+      
+                  // type/shape of the parameter
+                  type: ArgumentType.NUMBER
+                },
+                y: {
+                  defaultValue: 1,
+      
+                  // type/shape of the parameter
+                  type: ArgumentType.NUMBER
+                }
+              }
             }
           ]
         };
@@ -249,6 +355,37 @@ class Scratch3YourExtension {
       const num1 = parseFloat(NUMBER_ONE);
 
       return Math.acos(num1);
+    }
+
+    acosh ({ NUMBER_ONE }) {
+      const num1 = parseFloat(NUMBER_ONE);
+
+      return Math.acosh(num1);
+    }
+
+    asin ({ NUMBER_ONE }) {
+      const num1 = parseFloat(NUMBER_ONE);
+
+      return Math.asin(num1);
+    }
+
+    asinh ({ NUMBER_ONE }) {
+      const num1 = parseFloat(NUMBER_ONE);
+
+      return Math.asinh(num1);
+    }
+
+    atan ({ NUMBER_ONE }) {
+      const num1 = parseFloat(NUMBER_ONE);
+
+      return Math.atan(num1);
+    }
+
+    atanTwo ({ x, y }) {
+      const num1 = parseFloat(x);
+      const num2 = parseFloat(y);
+
+      return Math.atan2(num1, num2);
     }
 }
 
