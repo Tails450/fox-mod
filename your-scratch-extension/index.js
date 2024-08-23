@@ -174,6 +174,26 @@ class Scratch3YourExtension {
                   type: ArgumentType.NUMBER
                 }
               }
+            },
+            {
+              // function where your code logic lives
+              opcode: 'acos',
+      
+              // type of block
+              blockType: BlockType.REPORTER,
+      
+              // label to display on the block
+              text: 'Acos [NUMBER_ONE]',
+      
+              // arguments used in the block
+              arguments: {
+                NUMBER_ONE: {
+                  defaultValue: 1,
+      
+                  // type/shape of the parameter
+                  type: ArgumentType.NUMBER
+                }
+              }
             }
           ]
         };
@@ -223,6 +243,12 @@ class Scratch3YourExtension {
       const num1 = parseFloat(NUMBER_ONE);
 
       return Math.abs(num1);
+    }
+
+    acos ({ NUMBER_ONE }) {
+      const num1 = parseFloat(NUMBER_ONE);
+
+      return Math.acos(num1);
     }
 }
 
